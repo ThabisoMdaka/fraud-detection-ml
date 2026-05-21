@@ -74,7 +74,7 @@ plt.suptitle('Credit Card Fraud Dataset — Class Imbalance Analysis',
 plt.tight_layout()
 plt.savefig('results/class_distribution.png', dpi=150)
 plt.close()
-print("✅ Saved: results/class_distribution.png")
+print("Saved: results/class_distribution.png")
 
 # Plot 2: Transaction Amount Distribution
 fig, axes = plt.subplots(1, 2, figsize=(14, 5))
@@ -107,7 +107,7 @@ plt.suptitle('Transaction Amount Analysis — Fraud vs Legitimate',
 plt.tight_layout()
 plt.savefig('results/amount_distribution.png', dpi=150)
 plt.close()
-print("✅ Saved: results/amount_distribution.png")
+print("Saved: results/amount_distribution.png")
 
 # ===============================
 # 3. PREPROCESSING
@@ -154,7 +154,7 @@ rf_model.fit(X_train_sm, y_train_sm)
 rf_pred = rf_model.predict(X_test)
 rf_proba = rf_model.predict_proba(X_test)[:, 1]
 rf_auc = roc_auc_score(y_test, rf_proba)
-print(f"✅ Random Forest ROC-AUC: {rf_auc:.4f}")
+print(f" Random Forest ROC-AUC: {rf_auc:.4f}")
 
 # ===============================
 # 5. TRAIN XGBOOST
@@ -172,7 +172,7 @@ xgb_model.fit(X_train_sm, y_train_sm)
 xgb_pred = xgb_model.predict(X_test)
 xgb_proba = xgb_model.predict_proba(X_test)[:, 1]
 xgb_auc = roc_auc_score(y_test, xgb_proba)
-print(f"✅ XGBoost ROC-AUC: {xgb_auc:.4f}")
+print(f" XGBoost ROC-AUC: {xgb_auc:.4f}")
 
 # ===============================
 # 6. RESULTS & VISUALIZATIONS
@@ -200,7 +200,7 @@ plt.suptitle('Model Comparison — Confusion Matrices',
 plt.tight_layout()
 plt.savefig('results/confusion_matrices.png', dpi=150)
 plt.close()
-print("✅ Saved: results/confusion_matrices.png")
+print(" Saved: results/confusion_matrices.png")
 
 # Plot 4: ROC Curves
 plt.figure(figsize=(10, 7))
@@ -226,7 +226,7 @@ plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.savefig('results/roc_curves.png', dpi=150)
 plt.close()
-print("✅ Saved: results/roc_curves.png")
+print(" Saved: results/roc_curves.png")
 
 # Plot 5: Feature Importance (XGBoost)
 plt.figure(figsize=(12, 8))
@@ -250,7 +250,7 @@ plt.grid(True, alpha=0.3, axis='x')
 plt.tight_layout()
 plt.savefig('results/feature_importance.png', dpi=150)
 plt.close()
-print("✅ Saved: results/feature_importance.png")
+print(" Saved: results/feature_importance.png")
 
 # Plot 6: Precision-Recall Curve
 plt.figure(figsize=(10, 7))

@@ -1,4 +1,7 @@
-creditcard.csv 
-*.h5 
+venv/ 
+data/raw/ 
+data/processed/ 
+*.csv 
 __pycache__/ 
-*.pyc
+*.pyc 
+.streamlit/
